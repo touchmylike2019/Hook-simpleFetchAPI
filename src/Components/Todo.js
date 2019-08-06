@@ -13,14 +13,7 @@ function Todo(){
     const [todos, setTodos] = useState([])
 	useEffect(() => {
 		axios.get('http://jsonplaceholder.typicode.com/todos')
-			// .then(res => res.json())
-			// .then(data => {
-			// 	setTodos(data)
-            // })
-            // .then(res => {
-            //     setTodos(res.data)
-            // })
-            .then(res => console.log(res))
+			.then(res => setTodos(res.data))
     })
     return (
         <Container>
